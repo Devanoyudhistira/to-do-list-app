@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="nama saya "></h1>
+    <form action="">
+      <label for="nama">masukan nama anda</label>
+      <input type="text" name="" id="nama" />
+      <button type="submit">enter</button>
+      <button class="delete"> delete </button>
+    </form>
+
+    <script type="module">
+      const form = document.querySelector("form");
+
+      form.addEventListener("submit", (e) => {
+        // e.preventDefault();
+        let text = document.querySelector("input").value;
+        // input = text
+        let nama = localStorage.setItem("nama", text);
+        // document.querySelector('h1').textContent = text
+      });
+      let input = localStorage.getItem("nama");
+      if (input) {
+        document.querySelector("h1").textContent = input;
+      }
+      document.querySelector('.delete').addEventListener('click' ,function(){
+            localStorage.removeItem('nama')
+      })
+
+
+
+      import {user,parents} from "./user.js";
+
+
+      const {bapak,ibu} = new parents('mom','dad')
+
+        console.log(ibu)      
+
+
+      
+    </script>
+  </body>
+</html>

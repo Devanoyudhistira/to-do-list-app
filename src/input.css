@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    input{
+        @apply border-none outline-none
+    }
+    html{
+        @apply font-poppins
+    }
+}
+
+.categori{
+    @apply px-6  rounded-full font-[700] text-sm capitalize tracking-widest font-poppins text-center gap-2 flex items-center
+}
+
+.note{
+    @apply w-[90vw] rounded-xl overflow-hidden relative bg-slate-100 shadow-md shadow-black py-4 px-4 before:w-4 before:top-0 before:left-0 before:h-full flex justify-between  before:absolute
+}
+
+.judul-note{
+    @apply text-2xl ml-2 font-inter font-[600] tracking-wider 
+}
+
+.category-radio{
+    @apply flex justify-between  py-2 px-1 font-inter font-[400] text-xl relative items-center capitalize ring-2 ring-sky-200
+}

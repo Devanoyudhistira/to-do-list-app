@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Freeman&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js"
+      integrity="sha512-4F1cxYdMiAW98oomSLaygEwmCnIP38pb4Kx70yQYqRwLVCs3DbRumfBq82T08g/4LJ/smbFGFpmeFlQgoDccgg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body class="overflow-x-hidden">
+    <main>
+      <nav
+        class="w-screen capitalize h-12 items-center bg-sky-400 flex justify-between relative top-0"
+      >
+        <h1
+          class="ml-2 text-2xl font-inter font-[600] tracking-widest text-blue-800"
+        >
+          note
+        </h1>
+        <h1 id="time" class="mr-4 text-2xl font-[700] font-inter"></h1>
+      </nav>
+      <div id="categories" class="flex justify-evenly py-2 items-center">
+        <div class="categori bg-blue-400">work</div>
+        <div class="categori bg-yellow-500">project</div>
+        <div class="categori bg-emerald-500">daily</div>
+      </div>
+      <article id="empty" class="grid place-items-center">
+        <figure class="text-center">
+          <img
+            src="img/empty-box.png"
+            class="w-[300px] h-[300px] relative top-[50px]"
+            alt=""
+            srcset=""
+          />
+          <figcaption class="font-bubblegumsans mt-14 text-black text-2xl">
+            You hasn't have anything yet
+          </figcaption>
+        </figure>
+      </article>
+      <form
+        id="create"
+        class="fixed top-[37%] duration-300 bg-white p-6 left-[27%] gap-2 hidden flex-col z-50"
+      >
+      <div class="self-center flex justify-between w-full ">
+        <h1 class=" text-2xl font-poppins font-[700] text-blue-900">create</h1>
+        <button id="closeform" class="p-2 rounded-full bg-slate- text-center shadow-black "> <i class="fa-solid fa-close text-xl " ></i> </button>
+      </div>
+
+        <div class="flex gap-2">
+          <label for="title" class="text-blue-500 font-[600] font-inter
+           capitalize text-xl">note title </label>
+          <input id="notetitle" type="text" class="w-32 ring-1 ring-sky-200 focus:ring-2 focus:ring-sky-500" id="title" maxlength="40" />
+        </div>
+
+        <div class="flex flex-col gap-2 ">
+          <label for="work" class="category-radio has-[:checked]:bg-blue-400 has-[:checked]:text-blue-700 has-[:checked]:ring-sky-500 has-[:checked]:ring-2 hover:ring-sky-500">
+            work
+            <input type="radio" class="absolute z-50 opacity-0 peer" name="categori" id="work">
+            <div class="w-4 h-4 bg-slate-100 rounded-full peer-checked:ring-4 ring-sky-500"></div>
+          </label>
+
+          <label for="project" class="category-radio has-[:checked]:bg-yellow-400/75 has-[:checked]:text-amber-700 has-[:checked]:ring-yellow-500 has-[:checked]:ring-2 hover:ring-yellow-500">
+            project
+            <input type="radio"  class="absolute z-50 opacity-0 peer" name="categori"id="project">
+            <div class="w-4 h-4 bg-slate-100 rounded-full peer-checked:ring-4 ring-yellow-500"></div>
+          </label>
+
+          <label for="daily" class="category-radio has-[:checked]:bg-emerald-400/75 has-[:checked]:text-emerald-900 has-[:checked]:ring-emerald-400 has-[:checked]:ring-2 hover:ring-emerald-400">
+            daily
+            <input type="radio"  class="absolute z-50 opacity-0 peer" name="categori"id="daily">
+            <div class="w-4 h-4 bg-slate-100 rounded-full peer-checked:ring-4 ring-emerald-500"></div>
+          </label>
+        </div>
+        <button type="submit" class="capitalize text-xl py-2 px-1 ring-2 ring-blue-400 hover:bg-blue-500 font-[600] font-inter hover:text-blue-900 duration-300" >create</button>
+      </form>
+      <article id="note-wrap" class="flex flex-col gap-2 mt-2 ml-2">
+      
+      
+      </article>
+      <button
+         id="add" class="fa-solid fa-plus fixed bottom-2 right-4 p-4 rounded-full bg-sky-400/80 after:w-auto after:h-auto after:absolute after:bg-sky-400 hover:after:opacity-100 after:left-0 after:duration-300 after:px-2 after:py-1 after:top-3 hover:after:-left-24 after:opacity-0 after:content-['add_new'] after:font-inter after:tracking-wider after:font-[400]"
+      ></button>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/7c8801c017.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      moment().format();
+    </script>
+    <script type="module" src="scripts/scripts.js"></script>
+  </body>
+</html>
