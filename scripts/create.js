@@ -48,10 +48,10 @@ for (let i = 0; i < localStorage.length; i++) {
     const notediv = document.createElement("div");
     notediv.classList = `note ${store.befores} `;
     const deletebutton = document.createElement("button");
-    deletebutton.innerHTML = `<i class="fa-solid fa-trash  text-3xl text-red-600"></i>`;
+    deletebutton.innerHTML = `<i class="fa-solid fa-trash text-3xl    text-red-600"></i>`;
 
 
-    notediv.innerHTML = `<div data-id="${store.id}"  class="flex flex-col">
+    notediv.innerHTML = `<div data-id="${store.id}"  class="flex flex-col ">
                 <h1 class="judul-note"> ${store.name} </h1>
                 <p id="date" class="ml-2 text-lg font-inter font-[500] capitalize">
                 ${store.kategory}
