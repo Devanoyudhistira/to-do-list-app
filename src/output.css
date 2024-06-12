@@ -580,8 +580,8 @@ html {
   bottom: 0.5rem;
 }
 
-.left-\[27\%\] {
-  left: 27%;
+.left-\[10\%\] {
+  left: 10%;
 }
 
 .right-4 {
@@ -592,48 +592,12 @@ html {
   top: 0px;
 }
 
-.top-\[37\%\] {
-  top: 37%;
+.top-\[28\%\] {
+  top: 28%;
 }
 
 .top-\[50px\] {
   top: 50px;
-}
-
-.left-\[10\%\] {
-  left: 10%;
-}
-
-.top-\[30\%\] {
-  top: 30%;
-}
-
-.top-\[26\%\] {
-  top: 26%;
-}
-
-.top-\[35\%\] {
-  top: 35%;
-}
-
-.top-\[55\%\] {
-  top: 55%;
-}
-
-.top-\[25\%\] {
-  top: 25%;
-}
-
-.top-\[65\%\] {
-  top: 65%;
-}
-
-.top-\[45\%\] {
-  top: 45%;
-}
-
-.top-\[28\%\] {
-  top: 28%;
 }
 
 .z-50 {
@@ -792,6 +756,10 @@ html {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-xl {
@@ -1132,4 +1100,8 @@ html {
 .has-\[\:checked\]\:ring-yellow-500:has(:checked) {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(234 179 8 / var(--tw-ring-opacity));
+}
+
+.text-red-600{
+  color: rgb(220,36,38);
 }
