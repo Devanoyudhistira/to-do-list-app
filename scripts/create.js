@@ -26,9 +26,22 @@ form.addEventListener("submit", (e) => {
   let key = `${new Date().getTime()}`;
   let kategori = '';
   let before = ''
-  work.checked ? kategori = "type : work" : ''
-  project.checked ? kategori = "type : project" : ''
-  daily.checked ? kategori = "type : daily" : ''
+  // work.checked ? kategori = "type : work" : ''
+  // project.checked ? kategori = "type : project" : ''
+  // daily.checked ? kategori = "type : daily" : ''
+
+  if(work.checked){
+    kategori = "work";
+    before = "before:bg-blue-400";
+  }
+  else if(project.checked){
+    kategori = "project";
+    before = "before:bg-yellow-400";
+  }
+ else if(daily.checked){
+    kategori = "daily";
+    before = "before:bg-green-400";
+  };
 
   let value = { id: key, name: nama,kategory : kategori,befores:before };
   localStorage.setItem(key, JSON.stringify(value));
